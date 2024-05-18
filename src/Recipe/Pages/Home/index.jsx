@@ -3,6 +3,8 @@ import { GlobalContext } from "../../Context";
 import Recipe_list from "../../Components/Recipe_list";
 import { motion } from "framer-motion";
 import Display from "../../Components/Display";
+import Video from "../../Components/Video"
+
 
 
 
@@ -58,9 +60,14 @@ const Home = () => {
             ))}
           </div>
         </div>
-
-        <div className="flex justify-center flex-wrap gap-8">
+        <div className="flex justify-between items-center gap-6">
+        <Video />
          <Display/>
+
+
+        </div>
+
+        <div className="flex justify-between  flex-wrap gap-8">
           {recipeList && recipeList.length > 0 ? (
             recipeList.map((item) => <Recipe_list item={item} />)
           ) : (
